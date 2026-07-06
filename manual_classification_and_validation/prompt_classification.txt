@@ -1,0 +1,14 @@
+I want to classify automatically reviewers comments made during code review depending on the code quality aspect they refer to. I have the following quality aspects I'm interested in: 
+
+Comprehensibility & Readability. Characterized by concepts like: comprehensible, understandable, clear purpose, clarity, simplify code, unusual syntax, unusual use of language features, readable, no useless code, brevity/ conciseness, formatting/ layout, style, indentation, adherence to naming conventions, code standard, usage of whitespace, use of idioms, consistency.
+
+Correctness. Characterized by concepts like: runnable/ free of bugs, language/ model/ framework choice, functionally correct, exception handling.
+
+Dynamic behavior. Characterized by concepts like: robust, good performance, secure, good use of time and resources, optimize code.
+
+Maintainability & Code Structure. Characterized by concepts like: maintainable, adaptable, reusable, used by others, interoperable, portable, not hardcoding variables and input, global variables, using standard libraries/ functions, use config files, flexibility, well structured, modular, cohesion, low coupling, no duplication, decomposition, structural complexity, encapsulation, grouping, elegance, doing one thing. 
+
+Testability. Testable, test coverage, data validation, I/O validation, debugging. All other categories of comments should just be classified as "other".
+
+Can you classify the comments in the following csv file? I have a lot of data, so I'm interested in precision over recall. Think hard, make it as precise as possible. Create a new csv file with the classification and your confidence for each comment.
+Do not write any Python script if not the one for reading the file, use your judgment as language model for the classification.

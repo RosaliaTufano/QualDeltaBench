@@ -1,0 +1,48 @@
+You are given a CSV file containing multiple code review instances.
+
+Each row represents one instance and contains at least the following fields:
+
+- A code review comment (“comment” column).
+- The version of a method before the change (“method_before” column).
+- The version of the same method after the change (“method_after” column).
+
+Your task is to analyze each row independently and determine whether the code change is an atomic implementation of the corresponding review comment.
+
+Definition of atomic:
+A change is atomic if it implements only the requested change described in the review comment, without introducing unrelated behavioral, structural, stylistic, refactoring, formatting, or cleanup changes.
+
+A change is non-atomic if the “after” method contains any modification that is not necessary to address the review comment, even if the extra change is correct, harmless, or improves the code.
+
+For each row:
+1. Read the code review comment.
+2. Compare the method before and the method after.
+3. Determine which changes directly implement the review comment.
+4. Identify any unrelated changes.
+5. Decide whether the change is atomic.
+
+Return your answer as a CSV with one output row for each input row.
+
+The output CSV must contain the following columns:
+
+- row_id: the identifier of the input row (“”row_id” column in the provided CSV file)
+- atomic: true or false.
+- confidence: high, medium, or low.
+- rationale: brief explanation of the decision.
+- related_changes: concise list of changes that directly implement the review comment.
+- unrelated_changes: concise list of changes that appear unrelated to the review comment. Leave empty if atomic is true.
+
+Guidelines:
+- Analyze each row independently.
+- Preserve the input order in the output.
+- Mark the change as atomic only if every observed modification is clearly required or strongly justified by the review comment.
+- Mark the change as non-atomic if there are additional changes beyond what the comment asks for.
+- Do not judge whether the code is good or bad in general.
+- Do not suggest improvements.
+- Do not infer intent beyond what is supported by the review comment and the code diff.
+- Formatting-only changes should be considered unrelated unless they are necessary to implement the comment.
+- Renaming, refactoring, reordering, cleanup, changed error handling, changed logging, changed conditions, changed defaults, or changed side effects should be flagged as unrelated unless directly required by the comment.
+- If the review comment is ambiguous, use the code context to make the best judgment and lower the confidence if needed.
+- If you cannot determine whether a change is related, mention it in the rationale and set confidence to medium or low.
+- Do not skip rows.
+- Do not merge multiple rows into a single judgment.
+- Do not output explanations outside the CSV.
