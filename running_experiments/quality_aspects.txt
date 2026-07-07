@@ -1,0 +1,7 @@
+Comprehensibility & Readability -- Characterized by concepts like: comprehensible, understandable, clear purpose, clarity, simplify code, unusual syntax, unusual use of language features, readable, no useless code, brevity/ conciseness, formatting/ layout, style, indentation, adherence to naming conventions, code standard, usage of whitespace, use of idioms, consistency.
+
+Correctness -- Characterized by concepts like: runnable/ free of bugs, language/ model/ framework choice, functionally correct, exception handling, robustness.
+
+Performance -- Characterized by concepts like: good performance, good use of time and resources, optimize code. 
+
+Maintainability & Code Structure -- Characterized by concepts like: maintainable, adaptable, reusable, used by others, interoperable, portable, not hardcoding variables and input, global variables, using standard libraries/ functions, use config files, flexibility, well structured, modular, cohesion, low coupling, no duplication, decomposition, structural complexity, encapsulation, grouping, elegance, doing one thing, using clear, consistent, and meaningful logging.

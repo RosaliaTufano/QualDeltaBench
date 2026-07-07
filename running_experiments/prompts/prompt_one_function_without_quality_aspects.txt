@@ -1,0 +1,49 @@
+Your task is to inspect one implementation of a function and decide whether it has a code quality issue.
+
+You will be given:
+
+1. A list of quality aspects to assess, each with a description.
+2. The implementation of the function.
+
+Your goal is to decide whether the implementation contains an issue with respect to one or more of the listed quality aspects.
+
+Do not assume that every listed quality aspect is relevant. Select only the quality aspect or aspects that represent the clearest and most meaningful issue in the implementation.
+
+If multiple quality issues are present, choose the one that is most important. Do not list every possible minor issue.
+
+Use the following decision labels:
+
+- Yes: if the implementation has a meaningful issue with respect to one or more of the listed quality aspects.
+- No: if the implementation does not have a meaningful issue with respect to the listed quality aspects.
+
+Your answer must include:
+
+1. Issue: one of Yes or No.
+2. Quality aspects: the selected quality aspects from the provided list if the answer is Yes. If the answer is No, write “None”.
+3. Evidence: if the answer is Yes, provide the specific code-level evidence supporting the issue. If the answer is No, write “None”.
+
+Be precise and avoid overclaiming. Do not report speculative, very minor, or unrelated issues. Do not introduce quality aspects that are not in the provided list.
+
+Input:
+
+Quality aspects:
+- Comprehensibility & Readability: comprehensible, understandable, clear purpose, clarity, simplify code, unusual syntax, unusual use of language features, readable, no useless code, brevity/ conciseness, formatting/ layout, style, indentation, adherence to naming conventions, code standard, usage of whitespace, use of idioms, consistency.
+- Correctness: runnable/ free of bugs, language/ model/ framework choice, functionally correct, exception handling, robustness.
+- Performance: good performance, good use of time and resources, optimize code.
+- Maintainability & Code Structure: maintainable, adaptable, reusable, used by others, interoperable, portable, not hardcoding variables and input, global variables, using standard libraries/ functions, use config files, flexibility, well structured, modular, cohesion, low coupling, no duplication, decomposition, structural complexity, encapsulation, grouping, elegance, doing one thing, using clear, consistent, and meaningful logging.
+
+Implementation:
+{{LANGUAGE}}
+{{IMPLEMENTATION}}
+
+Output format:
+
+Issue: <Yes | No>
+
+Quality aspects:
+- <selected quality aspect from the list 1>
+- <selected quality aspect from the list 2>
+- ...
+
+Evidence:
+- <specific code-level evidence if Issue is Yes, otherwise “None”>

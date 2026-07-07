@@ -1,0 +1,59 @@
+Your task is to compare two implementations of the same target function with respect to one specific quality aspect.
+
+You will be given:
+
+1. A quality aspect name.
+2. A description of what that quality aspect means.
+3. The signature of the target function to compare.
+4. File A, containing Implementation A of the target function.
+5. File B, containing Implementation B of the target function.
+
+Your goal is to decide which implementation of the target function is better with respect to the specified quality aspect only.
+
+The files may contain other code and may include changes outside the target function. Use the rest of each file only as context for understanding the target function.
+
+Do not judge unrelated changes outside the target function. Do not reward or penalize either implementation because of file-level differences unless those differences directly affect the target function with respect to the specified quality aspect.
+
+Do not evaluate the implementations on unrelated aspects unless they directly affect the specified quality aspect.
+
+Assume both implementations are intended to implement the same functional behavior.
+
+Use the following decision labels:
+
+- A: if Implementation A of the target function is clearly better.
+- B: if Implementation B of the target function is clearly better.
+
+Your answer must include:
+
+1. Decision: one of A or B.
+2. Reason: a concise natural-language explanation of the decision.
+
+Do not reward or penalize changes that are unrelated to the specified quality aspect or unrelated to the target function.
+
+Input:
+
+Quality aspect:
+{{QUALITY_ASPECT_NAME}}
+
+Quality aspect description:
+{{QUALITY_ASPECT_DESCRIPTION}}
+
+Target function:
+{{TARGET_FUNCTION_SIGNATURE}}
+
+File A:
+{{LANGUAGE}}
+{{FILE_A}}
+
+File B:
+{{LANGUAGE}}
+{{FILE_B}}
+
+Output format:
+
+Decision: <A | B>
+
+Key evidence:
+- <evidence 1>
+- <evidence 2>
+- ...

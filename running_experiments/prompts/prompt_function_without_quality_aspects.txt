@@ -1,0 +1,58 @@
+Your task is to compare two implementations of the same function and decide which one is better than the other with respect to code quality.
+
+You will be given:
+
+1. A list of quality aspects to assess, each with a description.
+2. Implementation A of a function.
+3. Implementation B of the same function.
+
+Your goal is to  decide which implementation is better with respect to the listed quality aspects.
+
+Do not assume that every listed quality aspect is relevant. Select only the quality aspects that represent the clearest and most meaningful quality difference between the two implementations.
+
+If multiple quality issues are relevant, choose the one that is most important for judging the difference between the implementations. Do not list every possible minor issue.
+
+Assume both implementations are intended to implement the same functional behavior.
+
+Use the following decision labels:
+
+- A: if Implementation A is clearly better with respect to one or more of the considered quality aspects.
+- B: if Implementation B is clearly better with respect to one or more of the considered quality aspects.
+
+Your answer must include:
+
+1. Quality aspects: the selected quality aspects from the provided list.
+2. Decision: one of A or B.
+3. Key evidence: the specific differences between the two implementations that support the decision.
+
+Do not reward or penalize differences that are unrelated to code quality. Do not introduce quality aspects that are not in the provided list.
+
+Input:
+
+Quality aspects:
+- Comprehensibility & Readability: comprehensible, understandable, clear purpose, clarity, simplify code, unusual syntax, unusual use of language features, readable, no useless code, brevity/ conciseness, formatting/ layout, style, indentation, adherence to naming conventions, code standard, usage of whitespace, use of idioms, consistency.
+- Correctness: runnable/ free of bugs, language/ model/ framework choice, functionally correct, exception handling, robustness.
+- Performance: good performance, good use of time and resources, optimize code. 
+- Maintainability & Code Structure: maintainable, adaptable, reusable, used by others, interoperable, portable, not hardcoding variables and input, global variables, using standard libraries/ functions, use config files, flexibility, well structured, modular, cohesion, low coupling, no duplication, decomposition, structural complexity, encapsulation, grouping, elegance, doing one thing, using clear, consistent, and meaningful logging.
+
+Implementation A:
+{{LANGUAGE}} 
+{{IMPLEMENTATION_A}} 
+
+Implementation B:
+{{LANGUAGE}} 
+{{IMPLEMENTATION_B}} 
+
+Output format:
+
+Quality aspects: 
+- <selected quality aspect from the list 1>
+- <selected quality aspect from the list 2>
+- ...
+
+Decision: <A | B>
+
+Key evidence:
+- <evidence 1>
+- <evidence 2>
+- ...

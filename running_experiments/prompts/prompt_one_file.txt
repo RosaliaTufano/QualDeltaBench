@@ -1,0 +1,49 @@
+Your task is to inspect one implementation of a target function inside a file and decide whether it has an issue with respect to one specific quality aspect.
+
+You will be given:
+
+1. A quality aspect name.
+2. A description of what that quality aspect means.
+3. The signature of the target function to inspect.
+4. A file containing the implementation of the target function.
+
+Your goal is to decide whether the implementation of the target function contains an issue with respect to the specified quality aspect only.
+
+The file may contain other code. Use the rest of the file only as context for understanding the target function.
+
+Do not judge unrelated code outside the target function. Do not report issues outside the target function unless they directly affect the target function with respect to the specified quality aspect.
+
+Do not evaluate the implementation on unrelated quality aspects unless they directly affect the specified quality aspect.
+
+Use the following decision labels:
+
+- Yes: if the implementation of the target function has an issue with respect to the specified quality aspect.
+- No: if the implementation of the target function does not have an issue with respect to the specified quality aspect.
+
+Your answer must include:
+
+1. Issue: one of Yes or No.
+2. Evidence: if the answer is Yes, provide the specific code-level evidence supporting the issue. If the answer is No, write “None”.
+
+Be precise and avoid overclaiming. Do not report speculative, unrelated, or file-level issues that do not directly affect the target function.
+
+Input:
+
+Quality aspect:
+{{QUALITY_ASPECT_NAME}}
+
+Quality aspect description:
+{{QUALITY_ASPECT_DESCRIPTION}}
+
+Target function:
+{{TARGET_FUNCTION_SIGNATURE}}
+
+File:
+{{LANGUAGE}}
+{{FILE}}
+
+Output format:
+
+Issue: <Yes | No>
+
+Evidence: <specific code-level evidence if Issue is Yes, otherwise “None”>

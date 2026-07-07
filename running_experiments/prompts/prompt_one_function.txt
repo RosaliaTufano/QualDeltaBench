@@ -1,0 +1,41 @@
+Your task is to inspect one implementation of a function and decide whether it has an issue with respect to one specific quality aspect.
+
+You will be given:
+
+1. A quality aspect name.
+2. A description of what that quality aspect means.
+3. The implementation of the function.
+
+Your goal is to decide whether the implementation contains an issue with respect to the specified quality aspect only.
+
+Do not evaluate the implementation on unrelated quality aspects unless they directly affect the specified quality aspect.
+
+Use the following decision labels:
+
+* Yes: if the implementation has an issue with respect to the specified quality aspect.
+* No: if the implementation does not have an issue with respect to the specified quality aspect.
+
+Your answer must include:
+
+1. Issue: one of Yes or No.
+2. Evidence: if the answer is Yes, provide the specific code-level evidence supporting the issue. If the answer is No write “None”.
+
+Be precise and avoid overclaiming. Do not report speculative, or unrelated issues.
+
+Input:
+
+Quality aspect:
+{{QUALITY_ASPECT_NAME}}
+
+Quality aspect description:
+{{QUALITY_ASPECT_DESCRIPTION}}
+
+Implementation:
+{{LANGUAGE}}
+{{IMPLEMENTATION}}
+
+Output format:
+
+Issue: <Yes | No>
+
+Evidence: <specific code-level evidence if Issue is Yes, otherwise “None”>

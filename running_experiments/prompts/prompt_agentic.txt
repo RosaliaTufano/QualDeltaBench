@@ -1,0 +1,83 @@
+You are an expert code judge.
+
+Your task is to compare two implementations of the same target function with respect to one specific quality aspect.
+
+You are inside a directory containing two snapshots of the same repository:
+
+- {snapshot_a_dirname}/, containing Implementation A
+- {snapshot_b_dirname}/, containing Implementation B
+
+You are given:
+
+1. A quality aspect name.
+2. A description of what that quality aspect means.
+3. The signature of the target function to compare.
+4. A file path where Implementation A of the target function can be found.
+5. A file path where Implementation B of the target function can be found.
+
+Your goal is to decide which implementation of the target function is better with respect to the specified quality aspect only.
+
+The files may contain other code and may include changes outside the target function. Use the rest of each file only as context for understanding the target function.
+
+Do not judge unrelated changes outside the target function. Do not reward or penalize either implementation because of file-level differences unless those differences directly affect the target function with respect to the specified quality aspect.
+
+Do not evaluate the implementations on unrelated aspects unless they directly affect the specified quality aspect.
+
+Assume both implementations are intended to implement the same functional behavior.
+
+Use the following decision labels:
+
+- A: if Implementation A of the target function is clearly better.
+- B: if Implementation B of the target function is clearly better.
+
+Input:
+
+Quality aspect:
+{quality_aspect}
+
+Quality aspect description:
+{quality_aspect_description}
+
+Target function:
+{function_name}
+
+File A path:
+{snapshot_a_dirname}/{file_path}
+
+File B path:
+{snapshot_b_dirname}/{file_path}
+
+Inspection rules:
+- Inspect File A and File B directly from the filesystem.
+- Locate and compare the target function in both files.
+- You may inspect surrounding code only if needed to understand the target function.
+- Do not edit files.
+- Do not create patches.
+- Do not run tests.
+- Do not inspect unrelated files unless strictly necessary.
+
+Mini-SWE-agent protocol:
+- Every assistant step must use the bash tool.
+- When you have collected enough evidence, finish by executing exactly one final bash command.
+- The final bash command must print COMPLETE_TASK_AND_SUBMIT_FINAL_OUTPUT on the first line.
+- The same final bash command must print the final answer after that first line.
+- Use this shape for the final command:
+
+cat <<'EOF'
+COMPLETE_TASK_AND_SUBMIT_FINAL_OUTPUT
+Decision: <A | B>
+
+Key evidence:
+- <evidence 1>
+- <evidence 2>
+- ...
+EOF
+
+Output format:
+
+Decision: <A | B>
+
+Key evidence:
+- <evidence 1>
+- <evidence 2>
+- ...

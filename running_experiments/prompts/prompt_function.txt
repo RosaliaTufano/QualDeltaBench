@@ -1,0 +1,51 @@
+Your task is to compare two implementations of the same function with respect to one specific quality aspect.
+
+You will be given:
+
+1. A quality aspect name.
+2. A description of what that quality aspect means.
+3. Implementation A.
+4. Implementation B.
+
+Your goal is to decide which implementation is better with respect to the specified quality aspect only.
+
+Do not evaluate the implementations on unrelated aspects unless they directly affect the specified quality aspect.
+
+Assume both implementations are intended to implement the same functional behavior.
+
+Use the following decision labels:
+
+- A:  if Implementation A is better.
+- B:  if Implementation B is better.
+
+Your answer must include:
+
+1. Decision: one of A or B.
+2. Key evidence: the specific differences between the two implementations that support the decision.
+
+Do not reward or penalize changes that are unrelated to the specified quality aspect.
+
+Input:
+
+Quality aspect:
+{{QUALITY_ASPECT_NAME}}
+
+Quality aspect description:
+{{QUALITY_ASPECT_DESCRIPTION}}
+
+Implementation A:
+{{LANGUAGE}} 
+{{IMPLEMENTATION_A}} 
+
+Implementation B:
+{{LANGUAGE}} 
+{{IMPLEMENTATION_B}} 
+
+Output format:
+
+Decision: <A | B>
+
+Key evidence:
+- <evidence 1>
+- <evidence 2>
+- ...
